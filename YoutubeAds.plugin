@@ -6,13 +6,12 @@
 #!author = Maasea Choler DivineEngine app2smile
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
 
-[Script]
-# 该模块已足够全面，无需其他规则混用，防止重写规则被破坏。
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js, requires-body=true, binary-body-mode=true,  tag=YouTube画中画, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
-
 [Rewrite]
-#^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/tinygif.gif"
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
 
+[Script]
+# 该模块已足够全面，无需其他规则混用，防止重写规则被破坏。
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js, requires-body=true, binary-body-mode=true, tag=YouTube画中画, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
+
 [MITM]
-hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
+hostname = *.googlevideo.com, youtubei.googleapis.com
