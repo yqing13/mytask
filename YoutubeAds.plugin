@@ -1,13 +1,10 @@
 #!name=去除 Youtube 广告 
 #!desc=去除 Youtube 广告（Beta）
 # IOS >= 15
-# 删除 瀑布流、视频、搜索中出现的广告和Shorts，
-# 删除 Shorts 内的视频广告
-# 删除 底部 上传 按钮
-# 增加 画中画(PIP), 后台播放
-# 广告信息会有遗漏，可能偶现广告
 # inspired by @Choler & @DivineEngine & @app2smile
 # https://github.com/Maasea/sgmodule/blob/master/YoutubeAds.sgmodule 修改为 Loon 可用
+#!author = Maasea Choler DivineEngine app2smile
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
 
 [Script]
 # 该模块已足够全面，无需其他规则混用，防止重写规则被破坏。
