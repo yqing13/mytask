@@ -11,8 +11,8 @@
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js, requires-body=true, binary-body-mode=true,  tag=YouTube画中画, img-url=https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/YouTube.png
 
 [Rewrite]
-# 使用 Mock 减少开销
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/tinygif.gif"
+#^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/tinygif.gif"
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-img
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
